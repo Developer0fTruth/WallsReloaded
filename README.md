@@ -1,6 +1,5 @@
-Survival Games by Double0negative
+Walls
 =================================
-Survival Games is a plugin that has the aim of creating a fully automated hunger games style experience. The plugin was created to be simple to use, and to be easily setup on any type of server, no matter the size or type! Survival Games provides a way for your server to have a full fledged, fully automated hunger games experience for any player. For more information on the aim of the plugin, watch popular youtuber AntVenom play Survival Games [HERE](http://www.youtube.com/watch?v=Lxqk1SRqW6I).
 
 Requirments
 -----------
@@ -16,36 +15,26 @@ Conflicts
 
 Features
 --------
-This is not just another Hunger Games plugin. This plugin aims to bring a fully automated, fully fledged gaming system to your server.
- - Full automation
- - Automatic arena regeneration
- - Chest reset / randomly filled chest
- - Auto game start
- - Spectators
- - In-game Lobby with real-time player and arena stats
- - Multiple arenas
- - Simultaneous games
- - Web-based stats
- - Easy arena setup
- - Per Arena Permissions
- - Lightning and thunder on player deaths (Simulate cannons)
- - Multiworld Support
- - Events API - Economy, Kits + More!
-Plus many, many more features included in this plugin!
+This is not just another Walls plugin. This plugin aims to bring a fully automated, full fledged gaming system to your server. Some of the features that will be included are listed below
 
-Next Update
------------
- - All known bugs, fixed.
- - Kits menu & config
- - Death match
- - and more!
+-Full automation
+-Automatic Arena reset
+-Does not use redstone! - Create your own maps!
+-Supports unlimited walls! (allows support for the walls and walls 2 maps along with custom maps!)
+-Automatic chest reset
+-Auto game start with voting & more
+-Spectators
+-In game Lobby with real-time player and arena status
+-Unlimited Arenas
+-Unlimited Spawns Per Arena
+-Simultaneous games
+-Web based stats
+-Easy arena setup
+-Multiworld Support
+-Built off the Survival Games engine, works the same simple, powerful and fast way as SG.
+
 Note: Devs and important people of this plugin have colored names on lobby signs
 
-Read Before Posting!
---------------------
- - A full tutorial on kits, economy and new features will be released soon!
- - /sg setlobbywall was changed to /sg addwall <arena> in versions 0.5.0 and above!
- - Need support? Find me on IRC @ irc.esper.net #survivalgames or use the webchat: http://webchat.esper.net/?channels=survivalgames  
 *New Permissions:*
 
 If you have for example 6 arenas, and you want every player to be able to join all arenas, give each rank the following permissions:
