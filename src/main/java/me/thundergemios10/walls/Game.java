@@ -28,8 +28,6 @@ import me.thundergemios10.walls.stats.StatsManager;
 import me.thundergemios10.walls.util.ItemReader;
 import me.thundergemios10.walls.util.Kit;
 
-import com.sk89q.wepif.PluginPermissionsResolver;
-
 
 
 //Data container for a game
@@ -57,6 +55,8 @@ public class Game {
 	private FileConfiguration system;
 	private HashMap < Integer, Player > spawns = new HashMap < Integer, Player > ();
 	private HashMap < Player, ItemStack[][] > inv_store = new HashMap < Player, ItemStack[][] > ();
+	private HashMap<Integer, Location> droploc1 = new HashMap();
+	private HashMap<Integer, Location> droploc2 = new HashMap();
 	private int spawnCount = 0;
 	private int vote = 0;
 	private boolean disabled = false;
@@ -70,6 +70,7 @@ public class Game {
 	private HashMap < String, String > hookvars = new HashMap < String, String > ();
 	private MessageManager msgmgr = MessageManager.getInstance();
 
+	@SuppressWarnings("unused")
 	private int dropwallstid = 0;
 	private int wallstime = 0;
 
@@ -878,7 +879,6 @@ public class Game {
 		return nextspec;
 	}
 
-	@SuppressWarnings("deprecation")
 	public void restoreInv(Player p) {
 		try {
 			clearInv(p);
@@ -890,7 +890,6 @@ public class Game {
 		}
 	}
 
-	@SuppressWarnings("deprecation")
 	public void clearInv(Player p) {
 		ItemStack[] inv = p.getInventory().getContents();
 		for (int i = 0; i < inv.length; i++) {

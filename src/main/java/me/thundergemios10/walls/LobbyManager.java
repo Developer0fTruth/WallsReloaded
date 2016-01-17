@@ -129,8 +129,8 @@ public class LobbyManager {
 	public void setLobbySignsFromSelection(Player pl, int a) {
 		FileConfiguration c = SettingsManager.getInstance().getSystemConfig();
 		SettingsManager s = SettingsManager.getInstance();
-		if (!c.getBoolean("sg-system.lobby.sign.set", false)) {
-			c.set("sg-system.lobby.sign.set", true);
+		if (!c.getBoolean("walls-system.lobby.sign.set", false)) {
+			c.set("walls-system.lobby.sign.set", true);
 			s.saveSystemConfig();
 		}
 		WorldEditPlugin we = GameManager.getInstance().getWorldEdit();

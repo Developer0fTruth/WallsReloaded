@@ -25,7 +25,7 @@ public class CommandCatch implements Listener{
         }
         if(!SettingsManager.getInstance().getConfig().getBoolean("disallow-commands"))
             return;
-        if(event.getPlayer().isOp() || event.getPlayer().hasPermission("sg.staff.nocmdblock"))
+        if(event.getPlayer().isOp() || event.getPlayer().hasPermission("walls.staff.nocmdblock"))
             return;
         else if(m.startsWith("/w") || m.startsWith("/walls")|| m.startsWith("/r")||m.startsWith("/msg")){
             return;

@@ -40,11 +40,11 @@ public class JoinEvent implements Listener {
                 }
             }, 5L);
         }
-        if((p.isOp() || p.hasPermission("sg.system.updatenotify")) && SettingsManager.getInstance().getConfig().getBoolean("check-for-update", true)){
+        if((p.isOp() || p.hasPermission("walls.system.updatenotify")) && SettingsManager.getInstance().getConfig().getBoolean("check-for-update", true)){
             Bukkit.getServer().getScheduler().scheduleAsyncDelayedTask(plugin, new Runnable() {
 
                 public void run() {
-                    System.out.println("[SG]Checking for updates");
+                    System.out.println("[Walls] Checking for updates");
                     new UpdateChecker().check(p, plugin);
                 }
              }, 60L);

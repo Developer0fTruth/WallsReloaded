@@ -56,7 +56,7 @@ public class UpdateChecker {
            // System.out.println(in[0]+b);
             if(b){
                 player.sendMessage(ChatColor.DARK_BLUE+"--------------------------------------");
-                player.sendMessage(ChatColor.DARK_RED+"[SurvivalGames] Update Available!");
+                player.sendMessage(ChatColor.DARK_RED+"[Walls] Update Available!");
                 player.sendMessage(ChatColor.DARK_AQUA    + "Your version: "+ChatColor.GOLD+v+ChatColor.DARK_AQUA+" Latest: "+ChatColor.GOLD+in[1]);
                 player.sendMessage(ChatColor.DARK_AQUA    + in[2]);
                 player.sendMessage(ChatColor.AQUA+""+ChatColor.UNDERLINE+in[3]);
@@ -64,10 +64,10 @@ public class UpdateChecker {
                 Walls.$("[Updates found!");
 
             }else{
-            	Walls.$("[SG][info]No updates found!");
+            	Walls.$("[Walls][info]No updates found!");
             }   
         }catch(Exception e){
-        	Walls.$(Level.WARNING, "[SurvivalGames] could not check for updates.");
+        	Walls.$(Level.WARNING, "[Walls] could not check for updates.");
         }
     }
 }

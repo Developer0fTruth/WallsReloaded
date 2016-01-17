@@ -186,6 +186,7 @@ public class QueueManager {
 
 
 
+		@SuppressWarnings("deprecation")
 		public void run(){
 
 			ArrayList<BlockData>data = queue.get(id);
