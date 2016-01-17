@@ -53,7 +53,7 @@ public class CommandHandler implements CommandExecutor {
 	private void loadCommands() {
 		commands.put("createarena", new CreateArena());
 		commands.put("join", new Join());
-		commands.put("addwall", new AddWall());
+		commands.put("setwall", new AddWall());
 		commands.put("setspawn", new SetSpawn());
 		commands.put("getcount", new ListArenas());
 		commands.put("disable", new Disable());
@@ -81,7 +81,7 @@ public class CommandHandler implements CommandExecutor {
 		//plus, instead of doing three differnet ifs, just iterate thru and check if the value == the page
 		helpinfo.put("createarena", 3);
 		helpinfo.put("join", 1);
-		helpinfo.put("addwall", 3);
+		helpinfo.put("setwall", 3);
 		helpinfo.put("setspawn", 3);
 		helpinfo.put("getcount", 3);
 		helpinfo.put("disable", 2);
@@ -90,6 +90,7 @@ public class CommandHandler implements CommandExecutor {
 		helpinfo.put("vote", 1);
 		helpinfo.put("leave", 1);
 		helpinfo.put("setlobbyspawn", 3);
+		helpinfo.put("addlobbywall", 3);
 		helpinfo.put("resetspawns", 3);
 		helpinfo.put("delarena", 3);
 		helpinfo.put("flag", 3);
