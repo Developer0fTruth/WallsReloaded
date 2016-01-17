@@ -111,8 +111,8 @@ sql:
   port: 3306
   user: 'root'
   pass: ''
-  database: 'survivalgames'
-  prefix: 'sg_'
+  database: 'walls'
+  prefix: 'walls_'
 
   
   
