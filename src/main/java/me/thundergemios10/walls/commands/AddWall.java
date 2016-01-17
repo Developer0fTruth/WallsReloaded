@@ -25,12 +25,12 @@ public class AddWall implements SubCommand{
 
     @Override
     public String help(Player p) {
-        return "/w addwall <id> - " + SettingsManager.getInstance().getMessageConfig().getString("messages.help.addwall", "Add a lobby stats wall for Arena <id>");
+        return "/w setwall <id> - " + SettingsManager.getInstance().getMessageConfig().getString("messages.help.addwall", "Add a lobby stats wall for Arena <id>");
     }
 
 	@Override
 	public String permission() {
-		return "walls.admin.addwall";
+		return "walls.admin.setwall";
 	}
 
     //TODO: TAKE A W.E SELECTIONA AND SET THE LOBBY. ALSO SET LOBBY WALL
