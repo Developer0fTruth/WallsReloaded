@@ -17,21 +17,21 @@ Features
 --------
 This is not just another Walls plugin. This plugin aims to bring a fully automated, full fledged gaming system to your server. Some of the features that will be included are listed below
 
--Full automation
--Automatic Arena reset
--Does not use redstone! - Create your own maps!
--Supports unlimited walls! (allows support for the walls and walls 2 maps along with custom maps!)
--Automatic chest reset
--Auto game start with voting & more
--Spectators
--In game Lobby with real-time player and arena status
--Unlimited Arenas
--Unlimited Spawns Per Arena
--Simultaneous games
--Web based stats
--Easy arena setup
--Multiworld Support
--Built off the Survival Games engine, works the same simple, powerful and fast way as SG.
+* -Full automation
+* -Automatic Arena reset
+* -Does not use redstone! - Create your own maps!
+* -Supports unlimited walls! (allows support for the walls and walls 2 maps along with custom maps!)
+* -Automatic chest reset
+* -Auto game start with voting & more
+* -Spectators
+* -In game Lobby with real-time player and arena status
+* -Unlimited Arenas
+* -Unlimited Spawns Per Arena
+* -Simultaneous games
+* -Web based stats
+* -Easy arena setup
+* -Multiworld Support
+* -Built off the Survival Games engine, works the same simple, powerful and fast way as SG.
 
 Note: Devs and important people of this plugin have colored names on lobby signs
 
