@@ -1,7 +1,7 @@
 name: Walls
 version: Walls Build 0.5.8.43 Walls Build #${BUILD_NUMBER}
 main: me.thundergemios10.walls.Walls
-authors: [Double0negative]
+authors: [Double0negative, ThunderGemios10]
 description: Fully Automated Walls Plugin!
 
 commands:
