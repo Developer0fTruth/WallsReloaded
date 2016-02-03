@@ -44,28 +44,28 @@ public class LobbyManagerOld implements Listener {
 
         FileConfiguration c = SettingsManager.getInstance().getSystemConfig();
         try {
-            if (!c.getBoolean("sg-system.lobby.sign.set")) return;
+            if (!c.getBoolean("walls-system.lobby.sign.set")) return;
         } catch (Exception e) {
             return;
         }
         boolean usingx = false;
         int hdiff = 0;
-        int x1 = c.getInt("sg-system.lobby.sign.x1");
-        int y1 = c.getInt("sg-system.lobby.sign.y1");
-        int z1 = c.getInt("sg-system.lobby.sign.z1");
-        int x2 = c.getInt("sg-system.lobby.sign.x2");
-        int y2 = c.getInt("sg-system.lobby.sign.y2");
-        int z2 = c.getInt("sg-system.lobby.sign.z2");
+        int x1 = c.getInt("walls-system.lobby.sign.x1");
+        int y1 = c.getInt("walls-system.lobby.sign.y1");
+        int z1 = c.getInt("walls-system.lobby.sign.z1");
+        int x2 = c.getInt("walls-system.lobby.sign.x2");
+        int y2 = c.getInt("walls-system.lobby.sign.y2");
+        int z2 = c.getInt("walls-system.lobby.sign.z2");
         int inc = 0;
         Location l;
         //  System.out.println(x1+"  "+y1+"  "+z1);
-        byte temp = ((Sign) new Location(p.getServer().getWorld(c.getString("sg-system.lobby.sign.world")), x1, y1, z1).getBlock().getState()).getData().getData();
+        byte temp = ((Sign) new Location(p.getServer().getWorld(c.getString("walls-system.lobby.sign.world")), x1, y1, z1).getBlock().getState()).getData().getData();
         //  System.out.println("facing "+temp);
         if (temp == 3 || temp == 4) {
-            l = new Location(Bukkit.getWorld(c.getString("sg-system.lobby.sign.world")), x1, y1, z1);
+            l = new Location(Bukkit.getWorld(c.getString("walls-system.lobby.sign.world")), x1, y1, z1);
             inc = -1;
         } else {
-            l = new Location(Bukkit.getWorld(c.getString("sg-system.lobby.sign.world")), x2, y1, z2);
+            l = new Location(Bukkit.getWorld(c.getString("walls-system.lobby.sign.world")), x2, y1, z2);
             inc = 1;
         }
 
@@ -85,7 +85,7 @@ public class LobbyManagerOld implements Listener {
             for (int x = hdiff - 1; x >= 0; x--) {
 
 
-                BlockState b = p.getServer().getWorld(SettingsManager.getInstance().getSystemConfig().getString("sg-system.lobby.sign.world")).getBlockAt(l).getState();
+                BlockState b = p.getServer().getWorld(SettingsManager.getInstance().getSystemConfig().getString("walls-system.lobby.sign.world")).getBlockAt(l).getState();
                 lobbychunks.add(b.getChunk());
                 if (b instanceof Sign) {
                     signs[y][x] = (Sign) b;
@@ -104,7 +104,7 @@ public class LobbyManagerOld implements Listener {
             }
         }
         showMessage(new String[] {
-            "", "Survival Games", "", "Double0negative", "iMalo", "mc-sg.org", ""
+            "", "Walls", "", "Double0negative", "iMalo", "ThunderGemios10" "mc-sg.org", ""
         });
 
         // try{Thread.sleep(4000);}catch(Exception e){}
@@ -124,8 +124,8 @@ public class LobbyManagerOld implements Listener {
     public void setLobbySignsFromSelection(Player pl) {
         FileConfiguration c = SettingsManager.getInstance().getSystemConfig();
         SettingsManager s = SettingsManager.getInstance();
-        if (!c.getBoolean("sg-system.lobby.sign.set", false)) {
-            c.set("sg-system.lobby.sign.set", true);
+        if (!c.getBoolean("walls-system.lobby.sign.set", false)) {
+            c.set("walls-system.lobby.sign.set", true);
             s.saveSystemConfig();
         }
 
@@ -143,13 +143,13 @@ public class LobbyManagerOld implements Listener {
         Vector max = sel.getNativeMaximumPoint();
         Vector min = sel.getNativeMinimumPoint();
 
-        c.set("sg-system.lobby.sign.world", pl.getWorld().getName());
-        c.set("sg-system.lobby.sign.x1", max.getBlockX());
-        c.set("sg-system.lobby.sign.y1", max.getBlockY());
-        c.set("sg-system.lobby.sign.z1", max.getBlockZ());
-        c.set("sg-system.lobby.sign.x2", min.getBlockX());
-        c.set("sg-system.lobby.sign.y2", min.getBlockY());
-        c.set("sg-system.lobby.sign.z2", min.getBlockZ());
+        c.set("walls-system.lobby.sign.world", pl.getWorld().getName());
+        c.set("walls-system.lobby.sign.x1", max.getBlockX());
+        c.set("walls-system.lobby.sign.y1", max.getBlockY());
+        c.set("walls-system.lobby.sign.z1", max.getBlockZ());
+        c.set("walls-system.lobby.sign.x2", min.getBlockX());
+        c.set("walls-system.lobby.sign.y2", min.getBlockY());
+        c.set("walls-system.lobby.sign.z2", min.getBlockZ());
 
         pl.sendMessage(ChatColor.GREEN + "Lobby Status wall successfuly created");
         s.saveSystemConfig();
@@ -279,10 +279,10 @@ public class LobbyManagerOld implements Listener {
 
     class LobbySignUpdater implements Runnable {
         public void run() {
-            //this.setName("[SurvivalGames] Lobby signs updater");
+            //this.setName("[Walls] Lobby signs updater");
             /*int trun = runningThread;
 
-            while(SurvivalGames.isActive() && trun == runningThread){*/
+            while(Walls.isActive() && trun == runningThread){*/
             updateGameStatus();
 
             /* try{
@@ -335,7 +335,7 @@ public class LobbyManagerOld implements Listener {
             try {
                 Game game = games.get(a);
                 //System.out.println(game.getMode());
-                signs[b][0].setLine(0, "[SurvivalGames]");
+                signs[b][0].setLine(0, "[Walls]");
                 signs[b][0].setLine(1, "Click to join");
                 signs[b][0].setLine(2, "Arena " + game.getID());
                 signs[b][1].setLine(0, "Arena " + game.getID());
