@@ -1,6 +1,6 @@
 name: Walls
-version: SG Build 0.5.8.42 Walls Build #${BUILD_NUMBER}
-main: org.mcsg.walls.Walls
+version: Walls Build 0.5.8.43 Walls Build #${BUILD_NUMBER}
+main: me.thundergemios10.walls.Walls
 authors: [Double0negative]
 description: Fully Automated Walls Plugin!
 
