@@ -1,4 +1,4 @@
-Walls [![Travis-CI](https://travis-ci.org/ThunderGemios10/WallsReloaded.svg)]
+Walls [![Travis-CI](https://travis-ci.org/ThunderGemios10/WallsReloaded.svg)](https://travis-ci.org/ThunderGemios10/WallsReloaded)
 =================================
 
 Requirments
