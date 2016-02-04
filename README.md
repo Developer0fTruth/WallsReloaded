@@ -1,4 +1,4 @@
-Walls
+Walls [![Travis-CI](https://travis-ci.org/ThunderGemios10/WallsReloaded.svg)](https://bitdeli.com/free "Travis CI")
 =================================
 
 Requirments
