@@ -19,6 +19,7 @@ import me.thundergemios10.walls.api.PlayerLeaveArenaEvent;
 import me.thundergemios10.walls.stats.StatsManager;
 import me.thundergemios10.walls.util.Kit;
 
+import com.sk89q.worldedit.Vector;
 import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 import com.sk89q.worldedit.bukkit.selections.Selection;
 
@@ -368,13 +369,13 @@ public class GameManager {
         player.sendMessage(ChatColor.RED + "You must make a WorldEdit Selection first");
         return;
       }
-	Vector max = sel.getNativeMaximumPoint();
-	Vector min = sel.getNativeMinimumPoint();
+	  Vector max = sel.getNativeMaximumPoint();
+	  Vector min = sel.getNativeMinimumPoint();
 
       int wallno = c.getInt("walls.arenas." + gameid + ".wallno",0) + 1;
       c.set("walls.arenas." + gameid + ".wallno", wallno);
       
-      c.set("walls.arenas." + gameid + ".wall." + wallno + ".world", max.getWorld().getName());
+      c.set("walls.arenas." + gameid + ".wall." + wallno + ".world", player.getWorld().getName());
       c.set("walls.arenas." + gameid + ".wall." + wallno + ".x1", max.getBlockX());
       c.set("walls.arenas." + gameid + ".wall." + wallno + ".y1", max.getBlockY());
       c.set("walls.arenas." + gameid + ".wall." + wallno + ".z1", max.getBlockZ());
