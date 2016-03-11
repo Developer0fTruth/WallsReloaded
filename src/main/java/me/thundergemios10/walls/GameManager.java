@@ -368,8 +368,8 @@ public class GameManager {
         player.sendMessage(ChatColor.RED + "You must make a WorldEdit Selection first");
         return;
       }
-      Location max = sel.getMaximumPoint();
-      Location min = sel.getMinimumPoint();
+	Vector max = sel.getNativeMaximumPoint();
+	Vector min = sel.getNativeMinimumPoint();
 
       int wallno = c.getInt("walls.arenas." + gameid + ".wallno",0) + 1;
       c.set("walls.arenas." + gameid + ".wallno", wallno);
