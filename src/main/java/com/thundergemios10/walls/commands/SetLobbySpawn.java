@@ -19,12 +19,10 @@ public class SetLobbySpawn implements SubCommand {
         return true;
     }
     
-    @Override
     public String help(Player p) {
         return "/w setlobbyspawn - " + SettingsManager.getInstance().getMessageConfig().getString("messages.help.setlobbyspawn", "Set the lobby spawnpoint");
     }
 
-	@Override
 	public String permission() {
 		return "walls.admin.setlobby";
 	}

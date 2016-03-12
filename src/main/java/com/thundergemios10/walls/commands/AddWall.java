@@ -16,7 +16,6 @@ public class AddWall implements SubCommand {
 		return "/w setwall <gameid> <wallid> - set a wall for an arena";
 	}
 
-	@Override
 	public String permission() {
 		return "walls.arena.setwall";
 	}

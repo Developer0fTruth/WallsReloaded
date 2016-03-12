@@ -11,7 +11,6 @@ import com.thundergemios10.walls.SettingsManager;
 
 public class Disable implements SubCommand{
 
-    @Override
     public boolean onCommand(Player player, String[] args) {        
         if(!player.hasPermission(permission()) && !player.isOp()){
             MessageManager.getInstance().sendFMessage(MessageManager.PrefixType.ERROR, "error.nopermission", player);
@@ -36,11 +35,11 @@ public class Disable implements SubCommand{
         }
         return true;
     }
-    @Override
+
     public String help(Player p) {
         return "/w disable <id> - " + SettingsManager.getInstance().getMessageConfig().getString("messages.help.disable", "Disables arena <id>");
     }
-	@Override
+
 	public String permission() {
 		return "walls.arena.disable";
 	}

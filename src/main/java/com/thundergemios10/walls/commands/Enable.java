@@ -13,7 +13,6 @@ import com.thundergemios10.walls.MessageManager.PrefixType;
 
 public class Enable implements SubCommand{
 
-	@Override
 	public boolean onCommand(Player player, String[] args) {        
 		if(!player.hasPermission(permission()) && !player.isOp()){
 			MessageManager.getInstance().sendFMessage(PrefixType.ERROR, "error.nopermission", player);
@@ -41,12 +40,10 @@ public class Enable implements SubCommand{
 	}
 
 
-	@Override
 	public String help(Player p) {
 		return "/w enable <id> - " + SettingsManager.getInstance().getMessageConfig().getString("messages.help.enable", "Enables arena <id>");
 	}
 
-	@Override
 	public String permission() {
 		return "walls.arena.enable";
 	}

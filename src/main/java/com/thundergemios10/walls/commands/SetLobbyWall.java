@@ -9,7 +9,6 @@ import com.thundergemios10.walls.SettingsManager;
 
 public class SetLobbyWall implements SubCommand{
 
-    @Override
     public boolean onCommand(Player player, String[] args) {
     	//player.sendMessage(ChatColor.RED+"This command has been replaced by /sg addwall <arenaid>");
     	return true;/*
@@ -25,12 +24,10 @@ public class SetLobbyWall implements SubCommand{
        return true;*/
     }
 
-    @Override
     public String help(Player p) {
         return "/w setlobbywall <id> - " + SettingsManager.getInstance().getMessageConfig().getString("messages.help.setlobbywall", "Add a lobby stats wall for Arena <id>");
     }
 
-	@Override
 	public String permission() {
 		return "walls.admin.setlobby";
 	}

@@ -9,7 +9,6 @@ import com.thundergemios10.walls.SettingsManager;
 
 public class AddLobbyWall implements SubCommand{
 
-    @Override
     public boolean onCommand(Player player, String[] args) {
         if(!player.hasPermission(permission()) && !player.isOp()){
             MessageManager.getInstance().sendFMessage(MessageManager.PrefixType.ERROR, "error.nopermission", player);
@@ -23,12 +22,10 @@ public class AddLobbyWall implements SubCommand{
        return true;
     }
 
-    @Override
     public String help(Player p) {
         return "/w addlobbywall <id> - " + SettingsManager.getInstance().getMessageConfig().getString("messages.help.addlobbywall", "Add a lobby stats wall for Arena <id>");
     }
 
-	@Override
 	public String permission() {
 		return "walls.admin.addlobbywall";
 	}

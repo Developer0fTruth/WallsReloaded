@@ -26,12 +26,10 @@ public class Vote implements SubCommand {
         return true;
     }
     
-    @Override
     public String help(Player p) {
         return "/w vote - " + SettingsManager.getInstance().getMessageConfig().getString("messages.help.vote", "Votes to start the game");
     }
 
-	@Override
 	public String permission() {
 		return "walls.arena.vote";
 	}

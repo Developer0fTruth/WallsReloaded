@@ -14,7 +14,6 @@ import com.thundergemios10.walls.MessageManager.PrefixType;
 
 public class DelArena implements SubCommand{
 
-    @Override
     public boolean onCommand(Player player, String[] args) {
         if (!player.hasPermission(permission()) && !player.isOp()){
             MessageManager.getInstance().sendFMessage(PrefixType.ERROR, "error.nopermission", player);
@@ -47,12 +46,10 @@ public class DelArena implements SubCommand{
         return true;
     }
 
-    @Override
     public String help (Player p) {
         return "/w delarena <id> - " + SettingsManager.getInstance().getMessageConfig().getString("messages.help.delarena", "Delete an arena");
     }
 
-	@Override
 	public String permission() {
 		return "walls.admin.deletearena";
 	}   

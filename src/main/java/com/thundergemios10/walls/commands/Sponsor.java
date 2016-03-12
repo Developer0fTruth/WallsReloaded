@@ -9,7 +9,6 @@ public class Sponsor implements SubCommand {
 
 	MessageManager msgmgr = MessageManager.getInstance();
 	
-	@Override
 	public boolean onCommand(Player player, String[] args) {
 	/*	if (!player.hasPermission("walls.player.sponsor") && !player.isOp()) {
             player.sendMessage(ChatColor.RED + "No Permission");
@@ -69,12 +68,10 @@ public class Sponsor implements SubCommand {
 		return true;
 	}
 
-	@Override
 	public String help(Player p) {
 		return "/w sponsor <player> <itemid> <amount> - Sponsor a player!";
 	}
 
-	@Override
 	public String permission() {
 		return "walls.player.sponsor";
 	}

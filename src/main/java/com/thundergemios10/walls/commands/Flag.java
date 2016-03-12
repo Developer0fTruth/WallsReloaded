@@ -13,7 +13,6 @@ import com.thundergemios10.walls.SettingsManager;
 
 public class Flag implements SubCommand {
 
-    @Override
     public boolean onCommand(Player player, String[] args) {
         
         if (!player.hasPermission(permission())) {
@@ -42,12 +41,10 @@ public class Flag implements SubCommand {
         return false;
     }
 
-    @Override
     public String help(Player p) {
         return "/w flag <id> <flag> <value> - " + SettingsManager.getInstance().getMessageConfig().getString("messages.help.flag", "Modifies an arena-specific setting");
     }
 
-	@Override
 	public String permission() {
 		return "walls.admin.flag";
 	}

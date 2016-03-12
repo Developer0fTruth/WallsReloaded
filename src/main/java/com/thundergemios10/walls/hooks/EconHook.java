@@ -14,7 +14,6 @@ import com.thundergemios10.walls.util.EconomyManager;
  */
 public class EconHook implements HookBase {
 
-	@Override
 	public void executehook(String player, String[] s2) {
 		if(EconomyManager.getInstance().econPresent()){
 			Economy econ = EconomyManager.getInstance().getEcon();

@@ -7,7 +7,6 @@ import com.thundergemios10.walls.MessageManager.PrefixType;
 
 public class Teleport implements SubCommand{
 
-	@Override
 	public boolean onCommand(Player player, String[] args) {
 		if(player.hasPermission(permission())){
 			if(args.length == 1){
@@ -32,12 +31,10 @@ public class Teleport implements SubCommand{
 		return true;
 	}
 
-	@Override
 	public String help(Player p) {
 		return "/w tp <arenaid> - " + SettingsManager.getInstance().getMessageConfig().getString("messages.help.teleport","Teleport to an arena");
 	}
 
-	@Override
 	public String permission() {
 		return "walls.arena.teleport";
 	}
