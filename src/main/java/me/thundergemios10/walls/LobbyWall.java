@@ -60,8 +60,9 @@ public class LobbyWall {
             Collections.reverse(signs);
         }
         addMsg("SurvivalGames");
-        addMsg("Double0negative");
-        addMsg("mc-sg.org");
+        addMsg("Double0Negative");
+        addMsg("ThunderGemios10");
+        addMsg("thundergemios10.com");
         addMsg("Game id: " + gameid);
         update();
         return true;
@@ -171,13 +172,5 @@ public class LobbyWall {
 
         }
     }
-
-
-
-
-
-
-
-
 
 }
